@@ -36,7 +36,10 @@ void setup()
   tft.println("Ready.");  
 
   tft.setTextSize(1);  
-  but1 = buttons.addButton( 50, 80, 80,  30, "B1");
+  but1 = buttons.addButton( 50, 50, 80,  30, "B1");
+  but2 = buttons.addButton( 50,  90, 80,  30, "Button 2");
+  but3 = buttons.addButton( 50, 130, 80,  30, "Button 3");  
+  but4 = buttons.addButton( 50, 170, 80,  30, "Button 4", BUTTON_DISABLED);
   buttons.drawButtons();
   
 }
@@ -48,7 +51,9 @@ void loop()
   {
       tft.setCursor(0, 0);
       tft.fillRect(0, 0, 240, 40, BLACK);
-      tft.println("pressed");        
+      tft.print("button ");
+      tft.print(pressed_button);
+      tft.println(" pressed.");        
   }
   
 }
